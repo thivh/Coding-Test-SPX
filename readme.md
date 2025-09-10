@@ -61,14 +61,14 @@ This section contains answers for the Coding Test questions
 
 ---
 
-## Insight customer-100000.csv 
+## 1. Insight customer-100000.csv 
 
 **Rows:** 100,000  
 **Columns:** `['Index', 'Customer Id', 'First Name', 'Last Name', 'Company', 'City', 'Country', 'Phone 1', 'Phone 2', 'Email', 'Subscription Date', 'Website']`
 
 ---
 
-## Numeric Columns Summary
+### Numeric Columns Summary
 
 | Column | Count    | Mean      | Std        | Min | 25%       | 50%       | 75%       | Max     |
 |--------|----------|-----------|------------|-----|-----------|-----------|-----------|---------|
@@ -76,7 +76,7 @@ This section contains answers for the Coding Test questions
 
 ---
 
-## Top 5 Values per Categorical Column
+### Top 5 Values per Categorical Column
 
 **Customer Id:**  
 - 53DBF8C8e33007b (1)  
@@ -155,14 +155,14 @@ This section contains answers for the Coding Test questions
 - http://cooke.com/ (21)  
 - https://boyle.com/ (21)
 
-## Insight customers-2000000.csv
+## 2. Insight customers-2000000.csv
 
 **Rows:** 2,000,000  
 **Columns:** `['Index', 'Customer Id', 'First Name', 'Last Name', 'Company', 'City', 'Country', 'Phone 1', 'Phone 2', 'Email', 'Subscription Date', 'Website']`
 
 ---
 
-## Numeric Columns Summary
+### Numeric Columns Summary
 
 | Column | Mean        | Variance           | Count     |
 |--------|------------|------------------|-----------|
@@ -170,7 +170,7 @@ This section contains answers for the Coding Test questions
 
 ---
 
-## Top 5 Values per Categorical Column
+### Top 5 Values per Categorical Column
 
 **Company:**  
 - Bridges Group (152)  
@@ -249,6 +249,10 @@ This section contains answers for the Coding Test questions
 - 2021-06-04 (2,402)  
 - 2021-07-04 (2,399)  
 
-## Small vs Large Files Comparison
+## 3. Small vs Large Files Comparison
 - Small files can be loaded fully into memory (e.g., with pandas) -> easy and fast for analysis.
 - Large files exceed memory -> must be streamed row by row -> manual computation for stats and top values.
+
+## 5. AI Tools Implementation
+- Frontend: https://hub.docker.com/repository/docker/thivh/codingtestspx-frontend
+- Backend: https://hub.docker.com/repository/docker/thivh/codingtestspx-backend/general
