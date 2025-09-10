@@ -63,120 +63,97 @@ This section contains answers for the Coding Test questions
 
 ## Insight customer-100000.csv 
 
-Rows: 100,000
-Columns: ['Index', 'Customer Id', 'First Name', 'Last Name', 'Company', 'City', 'Country', 'Phone 1', 'Phone 2', 'Email', 'Subscription Date', 'Website']
+**Rows:** 100,000  
+**Columns:** `['Index', 'Customer Id', 'First Name', 'Last Name', 'Company', 'City', 'Country', 'Phone 1', 'Phone 2', 'Email', 'Subscription Date', 'Website']`
 
-Numeric columns summary:
-               Index
-count  100000.000000
-mean    50000.500000
-std     28867.657797
-min         1.000000
-25%     25000.750000
-50%     50000.500000
-75%     75000.250000
-max    100000.000000
+---
 
-Top 5 values per categorical column:
+## Numeric Columns Summary
 
-Customer Id:
-Customer Id
-53DBF8C8e33007b    1
-A2F27F7E8Ee7A7b    1
-7E8EC8Bc5491Bbd    1
-cD90bD6fcF5E02C    1
-62ca9D31c59dc7D    1
-Name: count, dtype: int64
+| Column | Count    | Mean      | Std        | Min | 25%       | 50%       | 75%       | Max     |
+|--------|----------|-----------|------------|-----|-----------|-----------|-----------|---------|
+| Index  | 100,000  | 50,000.5  | 28,867.66  | 1   | 25,000.75 | 50,000.5  | 75,000.25 | 100,000 |
 
-First Name:
-First Name
-Joan       183
-Audrey     182
-Bridget    182
-Anne       180
-Melinda    177
-Name: count, dtype: int64
+---
 
-Last Name:
-Last Name
-Campbell     139
-Carney       132
-Gardner      131
-Patterson    130
-Cisneros     127
-Name: count, dtype: int64
+## Top 5 Values per Categorical Column
 
-Company:
-Company
-Campbell Ltd        17
-Wilkerson Ltd       17
-Booker and Sons     16
-Acosta Ltd          16
-Mccarty and Sons    15
-Name: count, dtype: int64
+**Customer Id:**  
+- 53DBF8C8e33007b (1)  
+- A2F27F7E8Ee7A7b (1)  
+- 7E8EC8Bc5491Bbd (1)  
+- cD90bD6fcF5E02C (1)  
+- 62ca9D31c59dc7D (1)  
 
-City:
-City
-Lake Frederick     16
-East Jeremy        15
-East Lee           15
-West Alec          15
-New Christopher    15
-Name: count, dtype: int64
+**First Name:**  
+- Joan (183)  
+- Audrey (182)  
+- Bridget (182)  
+- Anne (180)  
+- Melinda (177)  
 
-Country:
-Country
-Congo               835
-Korea               820
-Saudi Arabia        463
-Pitcairn Islands    456
-Saint Martin        453
-Name: count, dtype: int64
+**Last Name:**  
+- Campbell (139)  
+- Carney (132)  
+- Gardner (131)  
+- Patterson (130)  
+- Cisneros (127)  
 
-Phone 1:
-Phone 1
-973-170-7283x8389    1
-(948)810-1424x459    1
-077-245-2618         1
-001-450-998-6032     1
-559-467-0737x720     1
-Name: count, dtype: int64
+**Company:**  
+- Campbell Ltd (17)  
+- Wilkerson Ltd (17)  
+- Booker and Sons (16)  
+- Acosta Ltd (16)  
+- Mccarty and Sons (15)  
 
-Phone 2:
-Phone 2
-001-270-479-8553x9053    1
-+1-842-851-2545x429      1
-(908)899-2270x156        1
-358-893-0736x3799        1
-(509)631-4080x43607      1
-Name: count, dtype: int64
+**City:**  
+- Lake Frederick (16)  
+- East Jeremy (15)  
+- East Lee (15)  
+- West Alec (15)  
+- New Christopher (15)  
 
-Email:
-Email
-julia03@briggs.com       2
-kwalls@white.com         2
-ushields@saunders.com    2
-vgeorge@mendoza.com      2
-imitchell@church.com     2
-Name: count, dtype: int64
+**Country:**  
+- Congo (835)  
+- Korea (820)  
+- Saudi Arabia (463)  
+- Pitcairn Islands (456)  
+- Saint Martin (453)  
 
-Subscription Date:
-Subscription Date
-2020-12-11    155
-2020-05-22    146
-2020-01-18    145
-2022-02-13    144
-2020-10-31    144
-Name: count, dtype: int64
+**Phone 1:**  
+- 973-170-7283x8389 (1)  
+- (948)810-1424x459 (1)  
+- 077-245-2618 (1)  
+- 001-450-998-6032 (1)  
+- 559-467-0737x720 (1)  
 
-Website:
-Website
-https://guzman.com/        22
-http://www.maxwell.com/    22
-https://www.nunez.com/     22
-http://cooke.com/          21
-https://boyle.com/         21
-Name: count, dtype: int64
+**Phone 2:**  
+- 001-270-479-8553x9053 (1)  
+- +1-842-851-2545x429 (1)  
+- (908)899-2270x156 (1)  
+- 358-893-0736x3799 (1)  
+- (509)631-4080x43607 (1)  
+
+**Email:**  
+- julia03@briggs.com (2)  
+- kwalls@white.com (2)  
+- ushields@saunders.com (2)  
+- vgeorge@mendoza.com (2)  
+- imitchell@church.com (2)  
+
+**Subscription Date:**  
+- 2020-12-11 (155)  
+- 2020-05-22 (146)  
+- 2020-01-18 (145)  
+- 2022-02-13 (144)  
+- 2020-10-31 (144)  
+
+**Website:**  
+- https://guzman.com/ (22)  
+- http://www.maxwell.com/ (22)  
+- https://www.nunez.com/ (22)  
+- http://cooke.com/ (21)  
+- https://boyle.com/ (21)
 
 ## Insight customers-2000000.csv
 
