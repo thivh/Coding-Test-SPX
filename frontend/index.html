@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI Engineer Test Frontend</title>
+  <style>
+    body { font-family: sans-serif; max-width: 800px; margin: 2rem auto; }
+    h1 { color: #333; }
+    section { margin-bottom: 2rem; padding: 1rem; border: 1px solid #ccc; border-radius: 8px; }
+    label { display: block; margin-top: 1rem; }
+    button { margin-top: 0.5rem; padding: 0.5rem 1rem; cursor: pointer; }
+    pre { background: #f4f4f4; padding: 1rem; border-radius: 4px; }
+    .danger { background: #b22222; color: #fff; border: none; }
+  </style>
+</head>
+<body>
+  <h1>Receipt Insight Demo</h1>
+
+  <section>
+    <h2>1. Upload Receipt</h2>
+    <form id="uploadForm">
+      <label>
+        Select receipt image:
+        <input type="file" name="file" id="fileInput" accept="image/*" />
+      </label>
+      <button type="submit">Upload</button>
+    </form>
+    <pre id="uploadResult"></pre>
+  </section>
+
+  <section>
+    <h2>2. Ask Questions</h2>
+    <form id="qaForm">
+      <label>
+        Question:
+        <input type="text" id="qaInput" placeholder="e.g. What food did I buy yesterday?" size="50"/>
+      </label>
+      <button type="submit">Ask</button>
+    </form>
+    <pre id="qaResult"></pre>
+  </section>
+
+  <section>
+    <h2>3. Admin</h2>
+    <button id="resetDbBtn" class="danger">⚠ Reset Database</button>
+    <pre id="resetResult"></pre>
+  </section>
+
+<script>
+const API_BASE = "http://localhost:8000"; // backend FastAPI
+
+// Upload receipt
+document.getElementById("uploadForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const fileInput = document.getElementById("fileInput");
+  if (!fileInput.files.length) return alert("Choose a file first!");
+  const formData = new FormData();
+  formData.append("file", fileInput.files[0]);
+  const res = await fetch(API_BASE + "/upload-receipt", { method: "POST", body: formData });
+  const data = await res.json();
+  document.getElementById("uploadResult").textContent = JSON.stringify(data, null, 2);
+});
+
+// Q&A
+document.getElementById("qaForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const q = document.getElementById("qaInput").value;
+  const res = await fetch(API_BASE + "/qa?q=" + encodeURIComponent(q));
+  const data = await res.json();
+  document.getElementById("qaResult").textContent = JSON.stringify(data, null, 2);
+});
+
+// Reset DB
+document.getElementById("resetDbBtn").addEventListener("click", async () => {
+  if (!confirm("⚠ This will delete ALL receipts and purchases. Continue?")) return;
+  const res = await fetch(API_BASE + "/admin/reset-db", { method: "POST" });
+  const data = await res.json();
+  document.getElementById("resetResult").textContent = JSON.stringify(data, null, 2);
+});
+</script>
+</body>
+</html>
