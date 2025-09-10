@@ -258,3 +258,4 @@ This section contains answers for the Coding Test questions
 - Backend: https://hub.docker.com/repository/docker/thivh/codingtestspx-backend
 - Run `docker run myusername/backend:latest`
 - Run `docker run myusername/frontend:latest`
+- Access the tool from `http://localhost:5173/`
