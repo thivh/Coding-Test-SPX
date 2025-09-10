@@ -157,90 +157,97 @@ This section contains answers for the Coding Test questions
 
 ## Insight customers-2000000.csv
 
-Rows: 2,000,000
-Columns: ['Index', 'Customer Id', 'First Name', 'Last Name', 'Company', 'City', 'Country', 'Phone 1', 'Phone 2', 'Email', 'Subscription Date', 'Website']
+**Rows:** 2,000,000  
+**Columns:** `['Index', 'Customer Id', 'First Name', 'Last Name', 'Company', 'City', 'Country', 'Phone 1', 'Phone 2', 'Email', 'Subscription Date', 'Website']`
 
-Numeric column stats (mean, variance, count):
-Index: mean=1000000.50, variance=333333333335.10, count=2000000
+---
 
-Top categorical values per column:
+## Numeric Columns Summary
 
-Company:
-Bridges Group: 152
-Conway LLC: 148
-Cooke and Sons: 147
-Shields Ltd: 146
-Oneill Ltd: 146
+| Column | Mean        | Variance           | Count     |
+|--------|------------|------------------|-----------|
+| Index  | 1,000,000.5 | 333,333,333,335.1 | 2,000,000 |
 
-Customer Id:
-4962fdbE6Bfee6D: 1
-9b12Ae76fdBc9bE: 1
-39edFd2F60C85BC: 1
-Fa42AE6a9aD39cE: 1
-F5702Edae925F1D: 1
+---
 
-Email:
-meagan67@graham.com: 3
-shardy@horne.com: 2
-bradley65@haley.com: 2
-ipatton@nolan.com: 2
-jdonovan@shields.com: 2
+## Top 5 Values per Categorical Column
 
-Website:
-http://www.lloyd.com/: 256
-http://whitaker.com/: 255
-http://lewis.com/: 253
-https://www.contreras.com/: 244
-http://www.pacheco.com/: 242
+**Company:**  
+- Bridges Group (152)  
+- Conway LLC (148)  
+- Cooke and Sons (147)  
+- Shields Ltd (146)  
+- Oneill Ltd (146)  
 
-Phone 2:
-473-464-5270: 2
-702-550-9740: 2
-9794059873: 2
-493-421-2526: 2
-920.905.8447: 2
+**Customer Id:**  
+- 4962fdbE6Bfee6D (1)  
+- 9b12Ae76fdBc9bE (1)  
+- 39edFd2F60C85BC (1)  
+- Fa42AE6a9aD39cE (1)  
+- F5702Edae925F1D (1)  
 
-Phone 1:
-9363752051: 2
-001-078-920-4851: 2
-540.584.0550: 2
-779.345.5892: 2
-1468463971: 2
+**Email:**  
+- meagan67@graham.com (3)  
+- shardy@horne.com (2)  
+- bradley65@haley.com (2)  
+- ipatton@nolan.com (2)  
+- jdonovan@shields.com (2)  
 
-First Name:
-Mariah: 3082
-Samantha: 3040
-Jonathon: 3037
-Patricia: 3031
-Kerry: 3027
+**Website:**  
+- http://www.lloyd.com/ (256)  
+- http://whitaker.com/ (255)  
+- http://lewis.com/ (253)  
+- https://www.contreras.com/ (244)  
+- http://www.pacheco.com/ (242)  
 
-Last Name:
-Bird: 2133
-Gill: 2133
-Hubbard: 2126
-Lara: 2119
-Lamb: 2115
+**Phone 1:**  
+- 9363752051 (2)  
+- 001-078-920-4851 (2)  
+- 540.584.0550 (2)  
+- 779.345.5892 (2)  
+- 1468463971 (2)  
 
-City:
-Bradleymouth: 163
-Leemouth: 156
-Ashleymouth: 155
-Kirkmouth: 153
-Barrymouth: 151
+**Phone 2:**  
+- 473-464-5270 (2)  
+- 702-550-9740 (2)  
+- 9794059873 (2)  
+- 493-421-2526 (2)  
+- 920.905.8447 (2)  
 
-Country:
-Korea: 16240
-Congo: 16208
-Jordan: 8428
-Vietnam: 8388
-Suriname: 8375
+**First Name:**  
+- Mariah (3,082)  
+- Samantha (3,040)  
+- Jonathon (3,037)  
+- Patricia (3,031)  
+- Kerry (3,027)  
 
-Subscription Date:
-2022-02-27: 2430
-2020-07-07: 2428
-2020-06-16: 2414
-2021-06-04: 2402
-2021-07-04: 2399
+**Last Name:**  
+- Bird (2,133)  
+- Gill (2,133)  
+- Hubbard (2,126)  
+- Lara (2,119)  
+- Lamb (2,115)  
+
+**City:**  
+- Bradleymouth (163)  
+- Leemouth (156)  
+- Ashleymouth (155)  
+- Kirkmouth (153)  
+- Barrymouth (151)  
+
+**Country:**  
+- Korea (16,240)  
+- Congo (16,208)  
+- Jordan (8,428)  
+- Vietnam (8,388)  
+- Suriname (8,375)  
+
+**Subscription Date:**  
+- 2022-02-27 (2,430)  
+- 2020-07-07 (2,428)  
+- 2020-06-16 (2,414)  
+- 2021-06-04 (2,402)  
+- 2021-07-04 (2,399)  
 
 ## Small vs Large Files Comparison
 - Small files can be loaded fully into memory (e.g., with pandas) -> easy and fast for analysis.
