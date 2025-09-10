@@ -4,7 +4,7 @@ This section contains answers for the AI Agent Engineering Knowledge questions
 
 ---
 
-## Describe differences between REST API, MCP in the context of AI.
+## 1. Describe differences between REST API, MCP in the context of AI.
 
 - **REST API:**  
   Provides a stateless interface to interact with AI models. Applications send input and receive predictions in real time.
